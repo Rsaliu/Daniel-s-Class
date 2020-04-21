@@ -65,17 +65,17 @@ X1 = feature_scaler.fit_transform(X)
 
 # Analysis on subset1 - Personal Data
 # Finding the number of clusters (K) - Elbow Plot Method
-# inertia = []
-# for i in range(1,11):
-#     kmeans = KMeans(n_clusters = i, random_state = 100)
-#     kmeans.fit(X1)
-#     inertia.append(kmeans.inertia_)
+inertia = []
+for i in range(1,11):
+    kmeans = KMeans(n_clusters = i, random_state = 100)
+    kmeans.fit(X1)
+    inertia.append(kmeans.inertia_)
 
-# plt.plot(range(1, 11), inertia)
-# plt.title('The Elbow Plot')
-# plt.xlabel('Number of clusters')
-# plt.ylabel('Inertia')
-# plt.show()
+plt.plot(range(1, 11), inertia)
+plt.title('The Elbow Plot')
+plt.xlabel('Number of clusters')
+plt.ylabel('Inertia')
+plt.show()
 
 # # Running KMeans to generate labels
 kmeans = KMeans(n_clusters = 2)
