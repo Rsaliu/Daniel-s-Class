@@ -58,8 +58,7 @@ def converterSlope(column):
 X['Slope'] = X['Slope'].apply(converterSlope)
 # Normalizing numerical features so that each feature has mean 0 and variance 1
 
-print(X.head())
-print(X.info())
+ 
 
 feature_scaler = StandardScaler()
 X1 = feature_scaler.fit_transform(X)
