@@ -79,7 +79,7 @@ print(X.info())
 
 #Personal data
 
-subset1 = X[['job','marital','education']]
+subset1 = X[['age','job','marital','education']]
 
 #Financial Data 
 
@@ -152,11 +152,11 @@ plt.ylabel('Inertia')
 plt.show()
 
 # # Running KMeans to generate labels
-kmeans = KMeans(n_clusters = 7)
+kmeans = KMeans(n_clusters = 2)# 7 can also be used, but 2 is used so that the distinction can be seen
 kmeans.fit(X2)
 
 # Implementing t-SNE to visualize dataset
-tsne = TSNE(n_components = 2, perplexity =100,n_iter=500)
+tsne = TSNE(n_components = 2, perplexity =50,n_iter=1000)
 x_tsne = tsne.fit_transform(X2)
 default = list(X['default'])
 balance = list(X['balance'])
